@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#05060f" />
+  <title>AstraEvent — Sewa Panggung, Kursi, Tenda & Sewa Podium</title>
+  <meta name="description" content="" />
+
+  <!-- Fonts: Space Grotesk (display) + Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ====== LATAR LANGIT MALAM (dekoratif, tidak perlu diubah) ====== -->
+  <div class="bg-layer" aria-hidden="true"></div>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="nebula nebula-1" aria-hidden="true"></div>
+  <div class="nebula nebula-2" aria-hidden="true"></div>
+  <div class="nebula nebula-3" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#home">Lewati ke konten utama</a>
+
+  <!-- ====== NAVBAR ====== -->
+  <header class="site-header" id="siteHeader">
+    <div class="nav-container">
+
+      <!-- GANTI: nama brand vendor -->
+      <a href="#home" class="brand" aria-label="Event Properti, kembali ke beranda">
+        <span class="brand-mark">
+          <img src="img(SemuaFotoKesini)/img/logo.jpeg" alt="Logo Event Properti" />
+        </span>
+        <span class="brand-name">Event<em>Properti</em></span>
+      </a>
+
+      <nav aria-label="Navigasi utama">
+        <ul class="nav-menu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#tentang">Tentang Kami</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+
+      <a href="https://wa.me/6281385429670" class="btn btn-primary nav-cta js-wa"
+        data-message="Halo Event Properti! Saya ingin konsultasi kebutuhan perlengkapan event.">
+        Konsultasi Sekarang
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Menu mobile (dibuka/tutup lewat JavaScript) -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Navigasi mobile">
+    <a href="#home">Home</a>
+    <a href="#layanan">Layanan</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+    <a href="https://wa.me/6281385429670" class="btn btn-primary js-wa"
+      data-message="Halo Event Properti! Saya ingin konsultasi kebutuhan perlengkapan event.">
+      Konsultasi Sekarang
+    </a>
+  </nav>
+
+  <main>
+
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Vendor Perlengkapan Event Profesional</span>
+          <h1>Wujudkan <span class="grad-text">Event Spektakuler</span>, Kami Siapkan Semua Kebutuhannya.</h1>
+          <p class="hero-sub">
+            EVENT PROPERTI — vendor penyewaan perlengkapan event profesional: panggung, kursi, tenda, Sewa Podium, dan
+            perlengkapan pendukung lainnya untuk pernikahan, seminar, konser, event perusahaan, hingga semua event.
+          </p>
+          <div class="hero-cta">
+            <a href="#layanan" class="btn btn-primary btn-lg">Lihat Layanan <i data-lucide="arrow-right"></i></a>
+            <a href="#kontak" class="btn btn-ghost btn-lg">Hubungi Kami</a>
+          </div>
+
+          <!-- Trust indicator -->
+          <ul class="trust">
+            <li><i data-lucide="shield-check"></i>Profesional &amp; Terpercaya</li>
+            <li><i data-lucide="badge-check"></i>Peralatan Berkualitas</li>
+            <li><i data-lucide="calendar-check"></i>Siap untuk Berbagai Event</li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal" style="--d:.15s" data-parallax="10">
+          <div class="orbit orbit-1" aria-hidden="true"></div>
+          <div class="orbit orbit-2" aria-hidden="true"></div>
+
+          <div class="hero-frame">
+            <img src="img(SemuaFotoKesini)/img/foto1.jpeg"
+              alt="Panggung event dengan tata cahaya dan sound system hasil setup vendor perlengkapan event"
+              loading="lazy" decoding="async" />
+          </div>
+
+          <div class="hero-chip chip-a" data-parallax="22">
+            <div class="hero-chip-inner">
+              <i data-lucide="badge-check"></i>
+              <div><strong>100+ Event</strong><span>Berhasil ditangani</span></div>
+            </div>
+          </div>
+          <div class="hero-chip chip-b" data-parallax="-16">
+            <div class="hero-chip-inner">
+              <i data-lucide="star"></i>
+              <div><strong>4.9/5.0</strong><span>Rating kepuasan klien</span></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== LAYANAN ====== -->
+    <section class="section" id="layanan">
+      <div class="container">
+
+        <div class="sec-head center reveal">
+          <span class="eyebrow center">Layanan Kami</span>
+          <h2>Solusi Perlengkapan Event <span class="grad-text">dalam Satu Tempat</span></h2>
+          <p>Semua kebutuhan teknis acara Anda — dari panggung hingga pendingin ruangan — tersedia
+            dengan standar kualitas yang sama.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="svc reveal">
+            <span class="svc-num" aria-hidden="true">01</span>
+            <div class="svc-icon">
+              <img src="img(SemuaFotoKesini)/img/panggung1.png" alt="Panggung acara" loading="lazy" decoding="async" />
+            </div>
+            <h3>Sewa Panggung</h3>
+            <p>Panggung untuk konser, seminar, wedding, gathering, dan berbagai acara lainnya —
+              tersedia berbagai ukuran dengan struktur kokoh dan finishing rapi.</p>
+            <a class="svc-link" href="#kontak">Detail Layanan <i data-lucide="arrow-right"></i></a>
+          </article>
+
+          <article class="svc reveal" style="--d:.08s">
+            <span class="svc-num" aria-hidden="true">02</span>
+            <div class="svc-icon">
+              <img src="img(SemuaFotoKesini)/img/kursii edit.jpeg" alt="Kursi acara" loading="lazy" decoding="async" />
+            </div>
+            <h3>Sewa Kursi</h3>
+            <p>Beragam pilihan kursi untuk acara formal, pernikahan, meeting, dan event outdoor —
+              bersih, nyaman, dan siap tampil di segala format acara.</p>
+            <a class="svc-link" href="#kontak">Detail Layanan <i data-lucide="arrow-right"></i></a>
+          </article>
+
+          <article class="svc reveal" style="--d:.16s">
+            <span class="svc-num" aria-hidden="true">03</span>
+            <div class="svc-icon">
+              <img src="img(SemuaFotoKesini)/img/tenda1.png" alt="Tenda acara" loading="lazy" decoding="async" />
+            </div>
+            <h3>Sewa Tenda</h3>
+            <p>Tenda event untuk kebutuhan outdoor, bazar, wedding, pameran, dan acara komunitas —
+              dalam berbagai ukuran dengan pemasangan yang cepat dan aman.</p>
+            <a class="svc-link" href="#kontak">Detail Layanan <i data-lucide="arrow-right"></i></a>
+          </article>
+
+          <article class="svc reveal" style="--d:.24s">
+            <span class="svc-num" aria-hidden="true">04</span>
+            <div class="svc-icon">
+              <img src="img(SemuaFotoKesini)/img/podium.png" alt="Podium acara" loading="lazy" decoding="async" />
+            </div>
+            <h3>Sewa Podium</h3>
+            <p>Podium berkualitas untuk acara formal, seminar, konferensi, dan presentasi —
+              dirancang untuk memberikan tampilan profesional dan kenyamanan bagi pembicara.</p>
+            <a class="svc-link" href="#kontak">Detail Layanan <i data-lucide="arrow-right"></i></a>
+          </article>
+        </div>
+
+        <!-- Perlengkapan pendukung lainnya -->
+        <div class="svc-extra reveal">
+          <span class="svc-extra-label">Perlengkapan pendukung lainnya:</span>
+          <span class="chip"><i data-lucide="speaker"></i>Sound System</span>
+          <span class="chip"><i data-lucide="lightbulb"></i>Lighting</span>
+          <span class="chip"><i data-lucide="table"></i>Meja &amp; Buffet</span>
+          <span class="chip"><i data-lucide="zap"></i>Genset</span>
+          <span class="chip"><i data-lucide="truck"></i>Transport &amp; Logistik</span>
+          <span class="chip"><i data-lucide="party-popper"></i>Dekorasi</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== KEUNGGULAN ====== -->
+    <section class="section" id="keunggulan">
+      <div class="container why-grid">
+
+        <div class="why-left reveal">
+          <div class="sec-head">
+            <span class="eyebrow">Keunggulan Kami</span>
+            <h2>Mengapa Memilih Kami?</h2>
+            <p>Kami tidak hanya menyewakan peralatan — kami memastikan setiap detail teknis
+              berjalan mulus, agar Anda bisa fokus pada acara dan tamu Anda.</p>
+          </div>
+          <a href="#kontak" class="link-arrow">Diskusikan kebutuhan Anda <i data-lucide="arrow-up-right"></i></a>
+        </div>
+
+        <div class="why-list">
+          <div class="why-row reveal">
+            <div class="why-icon">
+              <img src="img(SemuaFotoKesini)/img/foto1.jpeg" alt="Penataan perlengkapan acara outdoor" loading="lazy"
+                decoding="async" />
+            </div>
+            <div>
+              <h3>Peralatan Berkualitas</h3>
+              <p>Semua peralatan dirawat dan diperiksa secara berkala — siap pakai, bersih,
+                dan layak tampil di setiap skala acara.</p>
+            </div>
+          </div>
+          <div class="why-row reveal" style="--d:.08s">
+            <div class="why-icon">
+              <img src="img(SemuaFotoKesini)/img/foto2.jpeg" alt="Tim profesional menyiapkan perlengkapan acara"
+                loading="lazy" decoding="async" />
+            </div>
+            <div>
+              <h3>Tim Profesional</h3>
+              <p>Tim berpengalaman yang menangani setup hingga pembongkaran, tanpa perlu Anda
+                repot memikirkan sisi teknis.</p>
+            </div>
+          </div>
+          <div class="why-row reveal" style="--d:.16s">
+            <div class="why-icon">
+              <img src="img(SemuaFotoKesini)/img/foto3.jpeg" alt="Perlengkapan acara dengan harga kompetitif"
+                loading="lazy" decoding="async" />
+            </div>
+            <div>
+              <h3>Harga Kompetitif</h3>
+              <p>Paket sewa fleksibel dengan harga transparan, bisa disesuaikan dengan skala
+                dan anggaran event Anda.</p>
+            </div>
+          </div>
+          <div class="why-row reveal" style="--d:.24s">
+            <div class="why-icon">
+              <img src="img(SemuaFotoKesini)/img/foto1.jpeg" alt="Pemasangan perlengkapan acara tepat waktu"
+                loading="lazy" decoding="async" />
+            </div>
+            <div>
+              <h3>Tepat Waktu &amp; Terpercaya</h3>
+              <p>Pengiriman dan pemasangan selalu sebelum H-day. Ratusan klien telah membuktikan
+                komitmen kami.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== TENTANG KAMI ====== -->
+    <section class="section" id="tentang">
+      <div class="container about-grid">
+
+        <div class="about-head reveal">
+          <span class="eyebrow">Tentang Kami</span>
+          <h2>Partner Terpercaya untuk <span class="grad-text">Setiap Skala Acara</span></h2>
+          <p>Event Properti hadir sebagai partner terpercaya untuk memenuhi kebutuhan perlengkapan
+            berbagai jenis acara. Kami berkomitmen memberikan pelayanan profesional, peralatan
+            berkualitas, serta solusi yang sesuai dengan kebutuhan dan anggaran setiap klien.</p>
+          <p>Mulai dari panggung modular, tenda dalam berbagai ukuran, kursi untuk segala format
+            acara, hingga podium untuk pembicara di area terbuka — semuanya tersedia dalam satu paket
+            sewa yang fleksibel.</p>
+
+          <!-- GANTI angka statistik pada atribut data-count -->
+          <div class="about-stats">
+            <div class="stat"><b data-count="100" data-suffix="+">0+</b><span>Event Ditangani</span></div>
+            <div class="stat"><b data-count="5" data-suffix="+">0+</b><span>Tahun Pengalaman</span></div>
+            <div class="stat"><b data-count="100" data-suffix="%">0%</b><span>Komitmen Pelayanan</span></div>
+          </div>
+        </div>
+
+        <div class="about-visual reveal" style="--d:.15s">
+          <div class="about-img">
+            <img src="img(semuaFotoKesini)/img/foto2.jpeg"
+              alt="Tim Event Properti melakukan setup tenda dan perlengkapan acara outdoor" loading="lazy"
+              decoding="async" />
+          </div>
+          <div class="about-badge">
+            <span class="ab-icon"><i data-lucide="award"></i></span>
+            <div><strong>5+ Tahun</strong><span>Pengalaman melayani event</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== GALERI ====== -->
+    <section class="section" id="galeri">
+
+      <div class="container">
+
+        <div class="sec-head center reveal">
+          <span class="eyebrow center">Galeri</span>
+          <h2>Jejak Kami di Berbagai <span class="grad-text">Acara</span></h2>
+          <p>Beberapa dokumentasi setup perlengkapan yang telah kami tangani untuk klien
+            di berbagai jenis event.</p>
+        </div>
+
+        <!-- Filter kategori galeri -->
+        <div class="gal-filters reveal">
+          <button class="gal-filter active" data-filter="all">Semua</button>
+          <button class="gal-filter" data-filter="panggung">Panggung</button>
+          <button class="gal-filter" data-filter="tenda">Tenda</button>
+          <button class="gal-filter" data-filter="kursi">Kursi</button>
+          <button class="gal-filter" data-filter="podium">Podium</button>
+          <button class="gal-filter" data-filter="dll">DLL</button>
+        </div>
+
+        <div class="gallery-grid">
+          <!-- GANTI src gambar dengan foto proyek Anda sendiri -->
+          <figure class="g-item wide reveal" data-cat="panggung">
+            <img src="img(SemuaFotoKesini)/img/panggung1.png" alt="Panggung utama konser dengan pencahayaan panggung"
+              loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Panggung</span>
+              <span class="g-title">Panggung utama konser 12×6 m dengan lighting penuh</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item reveal" style="--d:.06s" data-cat="panggung">
+            <img src="img(SemuaFotoKesini)/img/panggung2.png"
+              alt="Panggung seminar dengan backdrop dan panggung pembicara" loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Panggung</span>
+              <span class="g-title">Panggung seminar &amp; backdrop korporat</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item reveal" style="--d:.12s" data-cat="kursi">
+            <img src="img(SemuaFotoKesini)/img/foto3.jpeg" alt="Barisan kursi seminar untuk peserta acara"
+              loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Kursi</span>
+              <span class="g-title">Kursi seminar untuk 500 peserta</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item reveal" style="--d:.18s" data-cat="tenda">
+            <img src="img(SemuaFotoKesini)/img/tenda1.png" alt="Tenda acara dengan dekorasi lampu gantung"
+              loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Tenda</span>
+              <span class="g-title">Tenda &amp; dekorasi acara komunitas</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item wide reveal" style="--d:.24s" data-cat="tenda">
+            <img src="img(SemuaFotoKesini)/img/tenda2.png"
+              alt="Area resepsi pernikahan dengan deretan meja di dalam tenda" loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Tenda</span>
+              <span class="g-title">Area resepsi pernikahan dalam tenda</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item reveal" style="--d:.3s" data-cat="podium">
+            <img src="img(SemuaFotoKesini)/img/podium2.png"
+              alt="Acara indoor dengan pencahayaan hangat dan sirkulasi udara nyaman" loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Podium</span>
+              <span class="g-title">Podium presentasi untuk acara profesional</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item reveal" style="--d:.36s" data-cat="podium">
+            <img src="img(SemuaFotoKesini)/img/podium.png" alt="Ruang seminar ber-AC dengan peserta acara"
+              loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Podium</span>
+              <span class="g-title">Podium presentasi untuk acara profesional</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item wide reveal" style="--d:.42s" data-cat="dll">
+            <img src="img(SemuaFotoKesini)/img/kursi2.png" alt="Setup panggung, sound system, dan lighting acara besar"
+              loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">Setup Acara</span>
+              <span class="g-title">Setup panggung, sound system &amp; lighting</span>
+            </figcaption>
+          </figure>
+
+          <figure class="g-item reveal" style="--d:.48s" data-cat="dll">
+            <img src="img(SemuaFotoKesini)/img/foto2.jpeg" alt="Setup dekorasi dan perlengkapan acara pernikahan"
+              loading="lazy" decoding="async" />
+            <figcaption class="g-caption">
+              <span class="g-cat">DLL</span>
+              <span class="g-title">Setup akad nikah &amp; dekorasi pelaminan</span>
+            </figcaption>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== ALUR PEMESANAN ====== -->
+    <section class="section" id="alur">
+      <div class="container">
+
+        <div class="sec-head center reveal">
+          <span class="eyebrow center">Cara Memesan</span>
+          <h2>Empat Langkah Menuju <span class="grad-text">Event Anda</span></h2>
+          <p>Proses pemesanan yang sederhana dan transparan, dari konsultasi awal hingga hari acara.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <div class="step-num">01</div>
+            <div class="step-body">
+              <h3>Hubungi Kami</h3>
+              <p>Ceritakan rencana event Anda melalui WhatsApp atau form di halaman ini — tim kami merespons cepat di
+                jam kerja.</p>
+            </div>
+          </li>
+          <li class="step reveal" style="--d:.08s">
+            <div class="step-num">02</div>
+            <div class="step-body">
+              <h3>Konsultasikan Kebutuhan Event</h3>
+              <p>Kami bantu tentukan paket perlengkapan yang paling sesuai dengan jenis, skala, dan lokasi acara Anda.
+              </p>
+            </div>
+          </li>
+          <li class="step reveal" style="--d:.16s">
+            <div class="step-num">03</div>
+            <div class="step-body">
+              <h3>Dapatkan Penawaran Harga</h3>
+              <p>Penawaran rinci dan transparan tanpa biaya tersembunyi — masih bisa disesuaikan dengan anggaran Anda.
+              </p>
+            </div>
+          </li>
+          <li class="step reveal" style="--d:.24s">
+            <div class="step-num">04</div>
+            <div class="step-body">
+              <h3>Peralatan Siap Digunakan</h3>
+              <p>Tim kami datang lebih awal untuk pemasangan dan pengecekan, agar semuanya siap sebelum acara dimulai.
+              </p>
+            </div>
+          </li>
+        </ol>
+
+      </div>
+    </section>
+
+    <!-- ====== TESTIMONI ====== -->
+    <section class="section" id="testimoni">
+      <div class="container">
+
+        <div class="sec-head center reveal">
+          <span class="eyebrow center">Testimoni</span>
+          <h2>Apa Kata <span class="grad-text">Klien Kami</span></h2>
+          <p>Kepercayaan klien adalah alasan kami terus menjaga standar pelayanan di setiap acara.</p>
+        </div>
+
+        <div class="t-grid">
+          <!-- GANTI data testimoni di bawah ini -->
+          <article class="t-card reveal">
+            <span class="t-quote" aria-hidden="true"><i data-lucide="quote"></i></span>
+            <div class="t-stars">
+              <i data-lucide="star" class="f"></i><i data-lucide="star" class="f"></i><i data-lucide="star"
+                class="f"></i><i data-lucide="star" class="f"></i><i data-lucide="star" class="f"></i>
+            </div>
+            <p class="t-text">“Panggung dan tenda dipasang sehari sebelum acara, timnya rapi dan sangat kooperatif.
+              Tamu-tamu kami sampai mengira kami menyewa vendor hotel besar.”</p>
+            <div class="t-person">
+              <div class="t-avatar">RK</div>
+              <div><strong>Rina Kartika</strong><span>Wedding Organizer — Pernikahan</span></div>
+            </div>
+          </article>
+
+          <article class="t-card reveal" style="--d:.08s">
+            <span class="t-quote" aria-hidden="true"><i data-lucide="quote"></i></span>
+            <div class="t-stars">
+              <i data-lucide="star" class="f"></i><i data-lucide="star" class="f"></i><i data-lucide="star"
+                class="f"></i><i data-lucide="star" class="f"></i><i data-lucide="star" class="f"></i>
+            </div>
+            <p class="t-text">“Kami menyewa 400 kursi dan 3 unit AC untuk gathering kantor. Semua sudah ready sebelum
+              jam 7 pagi, proses pembongkarannya juga cepat. Sangat recommended.”</p>
+            <div class="t-person">
+              <div class="t-avatar">AP</div>
+              <div><strong>Andi Pratama</strong><span>HR Manager — Gathering Perusahaan</span></div>
+            </div>
+          </article>
+
+          <article class="t-card reveal" style="--d:.16s">
+            <span class="t-quote" aria-hidden="true"><i data-lucide="quote"></i></span>
+            <div class="t-stars">
+              <i data-lucide="star" class="f"></i><i data-lucide="star" class="f"></i><i data-lucide="star"
+                class="f"></i><i data-lucide="star" class="f"></i><i data-lucide="star" class="o"></i>
+            </div>
+            <p class="t-text">“Respons adminnya cepat, penawaran jelas tanpa biaya tersembunyi. Panggung seminarnya
+              stabil dan rapi untuk acara kampus kami.”</p>
+            <div class="t-person">
+              <div class="t-avatar">SM</div>
+              <div><strong>Sari Melati</strong><span>Ketua Panitia — Seminar Kampus</span></div>
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== CTA ====== -->
+    <section class="section cta" id="cta">
+      <div class="container">
+        <div class="cta-panel reveal">
+          <div class="cta-orbit" aria-hidden="true"></div>
+          <h2>Siap Membuat Event Anda <span class="grad-text">Lebih Berkesan?</span></h2>
+          <p>Diskusikan kebutuhan event Anda bersama tim kami dan dapatkan solusi perlengkapan
+            yang tepat — dari konsep hingga hari acara.</p>
+          <a href="https://wa.me/6281385429670" class="btn btn-primary btn-lg js-wa"
+            data-message="Halo Event Properti! Saya ingin konsultasi kebutuhan perlengkapan event.">
+            <i data-lucide="message-circle"></i>Konsultasi via WhatsApp
+          </a>
+          <span class="cta-note">Respons cepat • Senin–Sabtu, 08.00–17.00 WIB</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== KONTAK ====== -->
+    <section class="section" id="kontak">
+      <div class="container contact-grid">
+
+        <div class="contact-head reveal">
+          <span class="eyebrow">Kontak</span>
+          <h2>Mari Diskusikan <span class="grad-text">Event Anda</span></h2>
+          <p class="contact-lead">Tim kami siap membantu memilih perlengkapan yang tepat sesuai
+            jenis, skala, dan anggaran acara Anda.</p>
+
+          <!-- ====== GANTI DATA KONTAK VENDOR DI SINI ====== -->
+          <ul class="info-list">
+            <li class="info-item">
+              <span class="info-icon">
+                <img src="img(SemuaFotoKesini)/img/muka giga.png" alt="Logo Contact Person Event Properti" />
+              </span>
+              <div><b>Contact Person</b><span>Giga Bakti</span></div>
+            </li>
+            <li class="info-item">
+              <span class="info-icon">
+                <img src="img(SemuaFotoKesini)/img/wa.png" alt="Gambar WhatsApp Event Properti" />
+              </span>
+              <div><b>WhatsApp</b><span>+62 812-3456-7890</span></div>
+            </li>
+            <li class="info-item">
+              <span class="info-icon">
+                <img src="img(SemuaFotoKesini)/img/gmaill.png" alt="Gambar email Event Properti" />
+              </span>
+              <div><b>Email</b><span>gigabakti2007@gmail.com</span></div>
+            </li>
+            <li class="info-item">
+              <span class="info-icon">
+                <img src="img(SemuaFotoKesini)/img/lokasi logo.png" alt="Gambar alamat Event Properti" />
+              </span>
+              <div><b>Alamat</b><span>Jalan Ceger Raya No.8 Jurang Mangu Timur, Pd. Karya, Kec. Pd. Aren, Kota Tangerang
+                  Selatan, Banten 15222</span></div>
+            </li>
+            <li class="info-item">
+              <span class="info-icon">
+                <img src="img(SemuaFotoKesini)/img/jam.png" alt="Gambar jam operasional Event Properti" />
+              </span>
+              <div><b>Jam Operasional</b><span>Setiap Hari, 24 Jam</span></div>
+            </li>
+          </ul>
+
+          <a href="https://wa.me/6281385429670" class="btn btn-primary btn-lg js-wa"
+            data-message="Halo Event Properti! Saya ingin bertanya tentang penyewaan perlengkapan event.">
+            <i data-lucide="message-circle"></i>Chat WhatsApp Sekarang
+          </a>
+        </div>
+
+        <!-- Form konsultasi: divalidasi via JS lalu diteruskan ke WhatsApp -->
+        <div class="form-panel reveal" style="--d:.12s">
+          <h3>Form Konsultasi</h3>
+          <p>Isi form di bawah — pesan Anda akan langsung diteruskan ke WhatsApp tim kami.</p>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="f-nama">Nama Lengkap</label>
+                <input type="text" id="f-nama" name="nama" placeholder="Nama Anda" autocomplete="name" />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+              <div class="form-field">
+                <label for="f-wa">Nomor WhatsApp</label>
+                <input type="tel" id="f-wa" name="wa" placeholder="6281385429670" autocomplete="tel"
+                  inputmode="numeric" />
+                <span class="form-error" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="f-event">Jenis Event</label>
+              <select id="f-event" name="event">
+                <option value="">— Pilih jenis event —</option>
+                <option>Pernikahan</option>
+                <option>Seminar / Konferensi</option>
+                <option>Konser / Panggung Hiburan</option>
+                <option>Gathering / Event Perusahaan</option>
+                <option>Bazar / Pameran</option>
+                <option>Lainnya</option>
+              </select>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <div class="form-field">
+              <label for="f-pesan">Pesan / Kebutuhan</label>
+              <textarea id="f-pesan" name="pesan" rows="4"
+                placeholder="Contoh: Saya butuh panggung 6×4 m, 200 kursi, dan 2 unit AC untuk acara pernikahan tanggal 12 Juni…"></textarea>
+              <span class="form-error" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Kirim via WhatsApp <i data-lucide="send"></i>
+            </button>
+            <p class="form-note">Pesan akan diteruskan langsung ke WhatsApp tim kami.</p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="f-brand">
+          <a href="#home" class="brand" aria-label="Event Properti, kembali ke beranda">
+            <span class="brand-mark">
+              <img src="img(SemuaFotoKesini)/img/logo.jpeg" alt="Logo Event Properti" />
+            </span>
+            <span class="brand-name">Event<em>Properti</em></span>
+          </a>
+          <p>Vendor penyewaan perlengkapan event profesional — panggung, kursi, tenda, podium,
+            dan perlengkapan pendukung lainnya untuk segala skala acara.</p>
+          <div class="social-row">
+            <a href="#" aria-label="Instagram Event Properti"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="Facebook Event Properti"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="YouTube Event Properti"><i data-lucide="youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="f-title">Navigasi</h4>
+          <ul class="f-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#tentang">Tentang Kami</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="f-title">Layanan</h4>
+          <ul class="f-links">
+            <li><a href="#layanan">Sewa Panggung</a></li>
+            <li><a href="#layanan">Sewa Kursi</a></li>
+            <li><a href="#layanan">Sewa Tenda</a></li>
+            <li><a href="#layanan">Sewa Podium</a></li>
+            <li><a href="#layanan">Perlengkapan Lainnya</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="f-title">Kontak</h4>
+          <ul class="f-contact">
+            <li><i data-lucide="user"></i><span>Giga Bakti</span></li>
+            <li><i data-lucide="message-circle"></i><span>+62 813-8542-9670</span></li>
+            <li><i data-lucide="mail"></i><span>gigabakti2007@gmail.com</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year">2026</span> Event Properti. All Rights Reserved.</p>
+        <p>Peralatan event standar profesional untuk segala skala acara.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Tombol kembali ke atas, dengan ring progres scroll -->
+  <button id="backToTop" aria-label="Kembali ke atas">
+    <svg class="ring" viewBox="0 0 54 54" aria-hidden="true">
+      <defs>
+        <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#8a76ff" />
+          <stop offset="1" stop-color="#4fd4ff" />
+        </linearGradient>
+      </defs>
+      <circle class="ring-bg" cx="27" cy="27" r="24" />
+      <circle id="progressRing" cx="27" cy="27" r="24" />
+    </svg>
+    <span class="ic"><i data-lucide="arrow-up"></i></span>
+  </button>
+
+  <!-- Notifikasi toast (pengganti alert) -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="ic-ok"><i data-lucide="check"></i></span>
+    <span class="ic-err"><i data-lucide="x"></i></span>
+    <span id="toastMsg"></span>
+  </div>
+
+  <!-- Lucide Icons (dipanggil sebelum script.js) -->
+  <script src="https://unpkg.com/lucide@0.263.1"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

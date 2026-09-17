@@ -6,7 +6,7 @@
    Contoh: 6281385429670
 ============================================================ */
 const VENDOR = {
-  nama: 'AstraEvent',
+  nama: 'Event Properti',
   whatsapp: '6281385429670'
 };
 

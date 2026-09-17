@@ -7,7 +7,7 @@
 ============================================================ */
 const VENDOR = {
   nama: 'Event Properti',
-  whatsapp: '6281385429670'
+  whatsapp: '6281385429670',
 };
 
 const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

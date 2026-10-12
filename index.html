@@ -668,8 +668,8 @@
 
             <div class="form-field">
               <label for="f-event">Jenis Event</label>
-              <select id="f-event" name="event">
-                <option value="">â€” Pilih jenis event â€”</option>
+              <select id="f-event" name="event" aria-describedby="f-event-error">
+                <option value="">Pilih jenis event</option>
                 <option>Pernikahan</option>
                 <option>Seminar / Konferensi</option>
                 <option>Konser / Panggung Hiburan</option>
@@ -677,7 +677,7 @@
                 <option>Bazar / Pameran</option>
                 <option>Lainnya</option>
               </select>
-              <span class="form-error" aria-live="polite"></span>
+              <span class="form-error" id="f-event-error" aria-live="polite"></span>
             </div>
 
             <div class="form-field">
@@ -792,4 +792,3 @@
 </body>
 
 </html>
-

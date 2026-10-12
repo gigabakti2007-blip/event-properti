@@ -343,7 +343,9 @@ form.addEventListener('submit', e => {
 
 // Hapus tanda error begitu pengguna mulai mengetik ulang
 form.querySelectorAll('input, select, textarea').forEach(el => {
-  el.addEventListener('input', () => el.closest('.form-field').classList.remove('error'));
+  el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', () => {
+    el.closest('.form-field').classList.remove('error');
+  });
 });
 
 /* ============================================================
